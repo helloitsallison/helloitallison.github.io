@@ -1,0 +1,246 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: Glysa;
+  src: url(https://halfnhalf.superhi.com/glysa.otf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(https://halfnhalf.superhi.com/inter.var.woff2);
+}
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+h1 {
+  font-size: 5vw;
+  line-height: 1;
+  font-family: "Glysa", sans-serif;
+  padding: 0 0 0.75em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1.4;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-variation-settings: "wght" 700;
+  color: #191919;
+}
+
+p {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-variation-settings: "wght" 400;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+}
+section div {
+  width: 50%;
+  padding: 4vw;
+}
+section .left {
+  background: #191919;
+  color: #fafafa;
+  height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  overflow: scroll;
+  z-index: 10;
+}
+section .left p {
+  padding: 0 0 1.25em 0;
+  color: #fafafa;
+}
+section .left p span {
+  font-variation-settings: "slnt" -10, "wght" 450;
+}
+section .left a, section .left a:visited {
+  color: #f4f4f4;
+  font-variation-settings: "wght" 700;
+}
+section .left a:hover {
+  font-variation-settings: "slnt" -10, "wght" 700;
+}
+section a.project {
+  text-decoration: none;
+  background: #ffffff;
+}
+section p {
+  color: #191919;
+  padding: 0;
+}
+section article:hover {
+  background: #f4f4f4;
+  border-radius: 32px;
+}
+section article:hover h4 {
+  text-decoration: underline;
+}
+section article:hover img {
+  transform: scale(1.15);
+}
+
+.project-card {
+  flex-direction: column;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+  padding: 1.5em;
+  border-radius: 24px;
+  max-width: auto;
+  height: auto;
+}
+.project-card .project-thumbnail {
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 16/9;
+}
+.project-card .project-thumbnail img {
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card .project-content {
+  flex-direction: column;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.project-card .project-content h4 {
+  padding: 1em 0 0.5em 0;
+}
+.project-card .project-content p {
+  padding: 0 0 1em 0;
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  section {
+    display: block;
+  }
+  section div {
+    width: 100%;
+  }
+  section div.left {
+    height: auto;
+  }
+  section .workobject {
+    padding: 1em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  section {
+    display: block;
+  }
+  section div {
+    width: 100%;
+  }
+  section div.left {
+    height: auto;
+  }
+  section div.left p {
+    font-size: 0.8em;
+    line-height: 1.35em;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #191919;
+    color: #d0d0d0;
+  }
+
+  section .left {
+    background-color: #373737;
+    background-image: url("https://halfnhalf.superhi.com/darkgradient01.jpeg");
+    background-size: cover;
+  }
+
+  .right p {
+    color: #bfbfbf !important;
+  }
+  .right h4 {
+    color: #fafafa;
+  }
+
+  .project-card:hover {
+    background: #373737;
+  }
+}
